@@ -97,8 +97,17 @@ Please follow the [installation](#installation) instruction and execute the foll
     UrlConfiguration urlConfiguration = new UrlConfiguration(env,"__authorization_code__");
     ```
 4. Fetch the client id and client secret from Seller API's - Developer Admin
+
+   ### Sandbox Environment 
+   #### For Both Self and Third Party Access
    * [Sandbox Seller API's - Developer Admin](https://sandbox-api.flipkart.net/oauth-register/login;jsessionid=A5F5726AD6160EAF99B8C3A781ED0053)
+   
+   ### Production Environment
+   #### For Self Access
+   * [Seller Dashboard - Developer Portal](https://seller.flipkart.com/sell-online/?referral_url=%2Findex.html%3F%23dashboard%2Fdeveloper-access)
+   #### For Third Party Access
    * [Prod Seller API's - Developer Admin](https://api.flipkart.net/oauth-register/login;jsessionid=A5F5726AD6160EAF99B8C3A781ED0053)
+
    ```
    //Replace the below values with your client id and secret
    accessTokenGenerator.clientCredentials("2236b321b07115458a50a701216b03229194","1e90ba1dc37ace3e658281c70ff215aac");
