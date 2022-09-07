@@ -92,9 +92,9 @@ Please follow the [installation](#installation) instruction and execute the foll
     UrlConfiguration urlConfiguration = new UrlConfiguration(env);
     ```
     
-    If it is Third Party Access, you have to specify both env and authorization_code. For more details please refer [Authorization Code Flow](https://seller.flipkart.com/api-docs/FMSAPI.html#auth-code-grant-label)
+    If it is Third Party Access, you have to specify env, redirect_url, state and authorization_code. For more details please refer [Authorization Code Flow](https://seller.flipkart.com/api-docs/FMSAPI.html#auth-code-grant-label)
     ```
-    UrlConfiguration urlConfiguration = new UrlConfiguration(env,"__authorization_code__");
+    UrlConfiguration urlConfiguration = new UrlConfiguration(env,"__redirectUrl__", "__state__", "__authCode__");
     ```
 4. Fetch the client id and client secret from Seller API's - Developer Admin
 
@@ -165,7 +165,7 @@ public class MyFlipkartApplication {
     //For Self Access
     UrlConfiguration urlConfiguration = new UrlConfiguration(env);
     //For Third Party
-    UrlConfiguration urlConfiguration = new UrlConfiguration(env,"__auth_code__");
+    UrlConfiguration urlConfiguration = new UrlConfiguration(env,"__redirectUrl__", "__state__", "__authCode__");
 
     //Replace the below values with client id and client secret here
     accessTokenGenerator.clientCredentials("__Client_ID__","__Client_Secret__");
@@ -219,7 +219,7 @@ public class MyFlipkartApplication {
     //For Self Access
     UrlConfiguration urlConfiguration = new UrlConfiguration(env);
     //For Third Party
-    UrlConfiguration urlConfiguration = new UrlConfiguration(env,"__auth_code__");
+    UrlConfiguration urlConfiguration = new UrlConfiguration(env,"__redirectUrl__", "__state__", "__authCode__");
 
     //Replace the below values with client id and client secret here
     accessTokenGenerator.clientCredentials("__Client_ID__","__Client_Secret__");
